@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link href="./bootstrap5/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-
+    <!-- 굳이 아이콘을 다운로드 하지 않아도 불러와서 쓸 수 있게 함  -->
+    <script src="https://kit.fontawesome.com/37d2af89bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
         <div class="container">
           <a class="navbar-brand" href="./index.html">MINI_0u0</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,14 +39,53 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li></ul>
               </li>
             </ul>
+            <!--로그인-->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Log In</a>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
                 </li>
             </ul>
           </div>
         </div>
     </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="logInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    log In</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 d-grid gap-2">
+                        <button type="button" class="btn btn-outline-dark btn-sm gap-2">
+                            <i class="fa-brands fa-google"></i>
+                            Login in with google
+                        </button>
+                        <button type="button" class="btn btn-outline-dark btn-sm">
+                            <i class="fa-regular fa-envelope"></i>
+                            Login in with E-mail
+                        </button>
+                    </div>
+                    <div class="col-md-6 col-sm-12 d-grid gap-2">
+                        <button type="button" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-user"></i>
+                            Sign Up with E-mail
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+        </div>
+        </div>
+    </div>
 
     <div class="container my-3">
         <div class="row">
